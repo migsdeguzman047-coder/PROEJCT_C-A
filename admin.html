@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard | C&amp;A Captivating Aroma</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="admin">
+
+  <div id="site-header"></div>
+
+  <main class="admin-wrap">
+    <div class="container">
+
+      <!--ADMIN LOGIN-->
+      <div class="auth-wrap" id="admin-login-box">
+        <h1 style="font-size:2.2rem;text-align:center">Admin login</h1>
+        <form class="form-card" id="admin-login-form" novalidate>
+          <div class="notice notice-error" id="admin-login-message" hidden></div>
+          <div class="form-group">
+            <label for="admin-user">Username</label>
+            <input type="text" id="admin-user" autocomplete="username">
+            <p class="field-error" id="err-admin-user"></p>
+          </div>
+          <div class="form-group">
+            <label for="admin-pass">Password</label>
+            <div class="password-wrap">
+              <input type="password" id="admin-pass" autocomplete="current-password">
+              <button type="button" id="admin-toggle-pass" aria-label="Show password">Show</button>
+            </div>
+            <p class="field-error" id="err-admin-pass"></p>
+          </div>
+          <button type="submit" class="btn btn-block">Log in</button>
+        </form>
+      </div>
+
+      <!--DASHBOARD-->
+      <div id="admin-dashboard" hidden>
+        <div class="admin-head">
+          <div>
+            <h1 style="font-size:2.4rem;margin:0">Order dashboard</h1>
+            <p style="margin:0;color:var(--muted)">Shows only orders saved in this browser's Local Storage. Orders are not synced between devices.</p>
+          </div>
+          <button type="button" class="btn btn-outline" id="admin-logout">Log out</button>
+        </div>
+
+        <div class="notice notice-success" id="admin-alert" hidden></div>
+        <div class="stat-grid" id="stat-grid"></div>
+
+        <div class="admin-toolbar">
+          <div>
+            <label for="admin-search">Search by customer name or order reference</label>
+            <input type="search" id="admin-search" placeholder="Example: Maria or CA-20261012" autocomplete="off">
+          </div>
+          <div>
+            <label for="admin-status-filter">Filter by status</label>
+            <select id="admin-status-filter"></select>
+          </div>
+        </div>
+
+        <p class="results-note" id="admin-results-note" role="status" aria-live="polite"></p>
+        <div id="admin-orders"></div>
+      </div>
+    </div>
+  </main>
+
+  <!--Order details pop-up-->
+  <div class="modal-backdrop" id="order-modal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="order-modal-title">
+      <button type="button" class="modal-close" id="order-modal-close" aria-label="Close order details">&times;</button>
+      <div class="modal-single" id="order-modal-body"></div>
+    </div>
+  </div>
+
+
+  <script src="js/common.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

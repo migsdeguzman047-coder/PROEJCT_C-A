@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C&amp;A Captivating Aroma | Find Your Signature Scent</title>
+  <meta name="description" content="Shop 60 favorite perfume scents for women, men and unisex from Captivating Aroma.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+  <div id="site-header"></div>
+
+  <main>
+    <!--HOME-->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div>
+          <p class="hero-tagline">LEAVE A CAPTIVATING IMPRESSION</p>
+          <h1>Find Your Signature Scent.</h1>
+          <p>C&amp;A brings your favorite perfumes together in one place. Choose from 60 scents in 20ml and 50ml bottles, sweet, floral, fresh or woody, and order in a few taps.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#shop">Shop Now</a>
+            <a class="btn btn-outline" href="#about">Our Story</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/logo.jpg" alt="C&amp;A Captivating Aroma logo: a perfume bottle formed by the letters C and A">
+        </div>
+      </div>
+    </section>
+
+    <!--BESTSELLERS-->
+    <section class="section" id="bestsellers">
+      <div class="container">
+        <div class="section-title">
+          <h2>Bestsellers</h2>
+          <p>The scents our customers keep coming back for.</p>
+        </div>
+        <div class="grid grid-products" id="featured-grid">
+          <p class="loading">Loading perfumes...</p>
+        </div>
+      </div>
+    </section>
+
+    <!--WHY C&A-->
+    <section class="section section-beige" id="why">
+      <div class="container">
+        <div class="section-title"><h2>Why choose C&amp;A</h2></div>
+        <div class="grid grid-3">
+          <div class="reason">
+            <h3>Scents you already love</h3>
+            <p>Popular fragrances for women, men and everyone.</p>
+          </div>
+          <div class="reason">
+            <h3>Pocket-friendly sizes</h3>
+            <p>Try a 20ml for ₱200, or take home a 50ml for ₱349.</p>
+          </div>
+          <div class="reason">
+            <h3>Delivery or meetup</h3>
+            <p>Pick what is easiest for you when you check out.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--SHOP-->
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="section-title">
+          <h2>Shop all scents</h2>
+          <p>Search by name, or filter by fragrance type and who it is for.</p>
+        </div>
+
+        <div class="toolbar">
+          <div class="search-box">
+            <label for="search-input">Search by perfume name</label>
+            <input type="search" id="search-input" placeholder="Try &quot;Vanilla&quot; or &quot;Dior&quot;" autocomplete="off">
+          </div>
+          <div>
+            <label for="gender-filter">For</label>
+            <select id="gender-filter">
+              <option value="All">Everyone</option>
+              <option value="Women">Women</option>
+              <option value="Men">Men</option>
+              <option value="Unisex">Unisex</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter-chips" id="category-chips" role="group" aria-label="Filter by fragrance category">
+          <button type="button" class="chip active" data-category="All">All</button>
+          <button type="button" class="chip" data-category="Sweet">Sweet</button>
+          <button type="button" class="chip" data-category="Floral">Floral</button>
+          <button type="button" class="chip" data-category="Fresh">Fresh</button>
+          <button type="button" class="chip" data-category="Woody">Woody</button>
+        </div>
+
+        <p class="results-note" id="results-note" role="status" aria-live="polite" style="margin-top:1rem"></p>
+        <div class="grid grid-products" id="product-grid">
+          <p class="loading">Loading perfumes...</p>
+        </div>
+      </div>
+    </section>
+
+    <!--FAVORITES-->
+    <section class="section section-beige" id="favorites">
+      <div class="container">
+        <div class="section-title">
+          <h2>Your favorites</h2>
+          <p>Perfumes you saved with the heart button. They stay here after you refresh.</p>
+        </div>
+        <div class="grid grid-products" id="favorites-grid">
+          <p class="loading">Loading favorites...</p>
+        </div>
+      </div>
+    </section>
+
+    <!--CART & CHECKOUT-->
+    <section class="section" id="cart">
+      <div class="container">
+        <div class="section-title">
+          <h2>Your cart</h2>
+          <p>Review your perfumes, then fill in your details to place your order.</p>
+        </div>
+
+        <div id="cart-main">
+          <!-- Empty cart message -->
+          <div class="empty-state" id="cart-empty" hidden>
+            <h3>Your cart is empty</h3>
+            <p>Add a perfume from the shop to get started.</p>
+            <a class="btn" href="#shop">Back to shop</a>
+          </div>
+
+          <!-- Cart with items -->
+          <div class="cart-layout" id="cart-filled" hidden>
+            <div>
+              <div id="cart-items"></div>
+              <a class="btn btn-outline" href="#shop">Back to shop</a>
+            </div>
+            <div>
+              <div class="summary-box" id="order-summary"></div>
+
+              <form class="form-card" id="checkout-form" novalidate style="margin-top:1.5rem">
+                <h3>Checkout</h3>
+
+                <div class="form-group">
+                  <label for="fullName">Full name</label>
+                  <input type="text" id="fullName" autocomplete="name">
+                  <p class="field-error" id="err-fullName"></p>
+                </div>
+                <div class="form-group">
+                  <label for="contact">Contact number</label>
+                  <input type="tel" id="contact" placeholder="09XX XXX XXXX" autocomplete="tel">
+                  <p class="field-error" id="err-contact"></p>
+                </div>
+                <div class="form-group">
+                  <label for="facebook">Facebook name or profile link</label>
+                  <input type="text" id="facebook">
+                  <p class="field-error" id="err-facebook"></p>
+                </div>
+
+                <div class="form-group">
+                  <label id="fulfillment-label">Fulfillment method</label>
+                  <div class="radio-row" role="radiogroup" aria-labelledby="fulfillment-label">
+                    <label><input type="radio" name="fulfillment" value="Delivery" checked> Delivery</label>
+                    <label><input type="radio" name="fulfillment" value="Meetup"> Meetup</label>
+                  </div>
+                </div>
+                <div class="form-group" id="address-group">
+                  <label for="address">Complete delivery address</label>
+                  <textarea id="address" rows="3" placeholder="House no., street, barangay, city"></textarea>
+                  <p class="field-error" id="err-address"></p>
+                </div>
+                <div class="form-group" id="meetup-group" hidden>
+                  <label for="meetup">Preferred meetup location</label>
+                  <input type="text" id="meetup" placeholder="Example: SM Megamall, main entrance">
+                  <p class="field-error" id="err-meetup"></p>
+                </div>
+                <div class="form-group">
+                  <label for="notes">Order notes (optional)</label>
+                  <textarea id="notes" rows="2"></textarea>
+                </div>
+                <button type="submit" class="btn btn-block" id="place-order">Place order</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!--Shown after a successful order-->
+        <div id="order-confirmation" hidden></div>
+      </div>
+    </section>
+
+    <!--ABOUT-->
+    <section class="section section-dark" id="about">
+      <div class="container about-grid">
+        <div>
+          <h2 style="color:var(--gold-light)">About Captivating Aroma</h2>
+          <p>Captivating Aroma started with a simple idea: everyone deserves a scent that feels like them. We collect well-loved fragrances so you can find your favorite without the guesswork.</p>
+          <p>Browse the catalog, save the ones you like, and place your order. We will confirm it with you personally.</p>
+          <a class="btn" href="#shop">Browse the catalog</a>
+        </div>
+        <div>
+          <img src="images/menu.png" alt="Captivating Aroma scent menu listing women's, men's and unisex perfumes">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!--Product details pop-up-->
+  <div class="modal-backdrop" id="product-modal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close details">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="confirm-modal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title" style="max-width:520px">
+      <div class="modal-single">
+        <h2 id="confirm-title" style="font-size:1.8rem">Are you sure you want to continue?</h2>
+        <p>Please double-check your details. We will use them to contact you and to deliver or meet up for your order.</p>
+        <div id="confirm-details"></div>
+        <div class="modal-row">
+          <button type="button" class="btn btn-outline" id="confirm-back">Go back and edit</button>
+          <button type="button" class="btn" id="confirm-yes">Yes, place my order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/orders.js"></script>
+</body>
+</html>
