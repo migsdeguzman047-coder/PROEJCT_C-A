@@ -1,10 +1,3 @@
-/* ==========================================================
-   favorites.js — the Favorites section
-   Saved product IDs live in Local Storage ("ca_favorites").
-   Steps: 1) read saved IDs  2) drop IDs that no longer exist
-          3) draw cards, or show an empty message
-   ========================================================== */
-
 const favoritesGrid = document.getElementById("favorites-grid");
 
 async function renderFavorites() {
