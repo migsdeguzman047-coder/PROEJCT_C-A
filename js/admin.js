@@ -1,11 +1,3 @@
-/* ==========================================================
-   admin.js — owner dashboard
-   NOTE: this login only checks the values below, and anyone who opens
-   this file can read them. Real admin protection needs a backend or a
-   trusted authentication service.
-   Orders come from the SAME browser's Local Storage ("ca_orders").
-   ========================================================== */
-
 // Change the owner's login here
 const ADMIN_USERNAME = "captivating aroma";   // not case-sensitive
 const ADMIN_PASSWORD = "chrystangela";        // case-sensitive
