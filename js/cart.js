@@ -1,10 +1,3 @@
-/* ==========================================================
-   cart.js — the Cart section
-   The cart in Local Storage only keeps: productId, size, quantity.
-   Names, images and prices are looked up from products.json,
-   so prices are always calculated from the catalog.
-   ========================================================== */
-
 const cartEmpty = document.getElementById("cart-empty");
 const cartFilled = document.getElementById("cart-filled");
 const cartItemsBox = document.getElementById("cart-items");
