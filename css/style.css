@@ -1,10 +1,3 @@
-/* ==========================================================
-   C&A — Captivating Aroma | Shared stylesheet
-   Sections: 1 Variables · 2 Base · 3 Layout · 4 Header/Footer
-             5 Buttons · 6 Hero & Home · 7 Product cards
-             8 Forms · 9 Cart/Tables · 10 Modal & Toast · 11 Responsive
-   ========================================================== */
- 
 /* 1. VARIABLES: change colors here and the whole site updates */
 :root {
   --black: #000000;
