@@ -1,12 +1,3 @@
-/* ==========================================================
-   orders.js — checkout form, validation and saving orders
-   Flow: validate form -> "Are you sure?" pop-up -> re-check cart
-         -> build order object -> save in Local Storage ("ca_orders")
-         -> clear cart -> show confirmation
-   NOTE: This is a front-end demo. The order is saved only in this
-   browser. Nothing is sent to the owner.
-   ========================================================== */
-
 const checkoutForm = document.getElementById("checkout-form");
 const placeOrderButton = document.getElementById("place-order");
 const cartMain = document.getElementById("cart-main");
