@@ -1,9 +1,3 @@
-/* ==========================================================
-   products.js — Bestsellers + Shop section
-   1 Product card   2 Hearts   3 Details pop-up
-   4 Search & filters   5 Start-up
-   ========================================================== */
-
 const productGrid = document.getElementById("product-grid");
 const featuredGrid = document.getElementById("featured-grid");
 const resultsNote = document.getElementById("results-note");
