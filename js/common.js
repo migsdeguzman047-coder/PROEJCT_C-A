@@ -1,9 +1,3 @@
-/* ==========================================================
-   common.js — code shared by EVERY page
-   1 Storage keys & helpers   2 Product loading (Fetch + JSON)
-   3 Favorites   4 Cart   5 Header & footer   6 Small tools
-   ========================================================== */
-
 /* 1. STORAGE KEYS — one place so names never get mixed up */
 const STORAGE_KEYS = {
   cart: "ca_cart",             // [{ productId, size, quantity }]
